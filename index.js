@@ -20,6 +20,6 @@ app.use((req, res, next) => {
 
 const server = http.createServer(app);
 
-server.listen(process.env.PORT || 3000, hostname, () => {
+server.listen(hostname, () => {
   console.log(`Server running at http://${hostname}:${port}`);
 });
