@@ -20,6 +20,6 @@ app.use((req, res, next) => {
 
 const server = http.createServer(app);
 
-server.listen(port, hostname, () => {
+server.listen(port || 8080, hostname, () => {
   console.log(`Server running at http://${hostname}:${port}`);
 });
