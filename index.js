@@ -4,7 +4,7 @@ const morgan = require('morgan');
 const bodyParser = require('body-parser');
 
 const hostname = 'localhost';
-const port = 3000;
+const PORT = process.env.PORT || 3000;
 
 const app = express();
 app.use(morgan('dev'));
@@ -20,6 +20,6 @@ app.use((req, res, next) => {
 
 const server = http.createServer(app);
 
-server.listen(process.env.PORT || 3000, hostname, () => {
+server.listen(PORT, hostname, () => {
   console.log(`Server running at http://${hostname}:${port}`);
 });
